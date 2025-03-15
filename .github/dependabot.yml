@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   # We want to be more sure in our e2e-test, before committing to
   # update all of our dependencies.
@@ -11,19 +11,11 @@ updates:
   - package-ecosystem: "cargo"
     directory: "/"
     schedule:
-      interval: "monthly"
-    allow:
-      # Allow only direct updates
-      - dependency-name: "log"
+      interval: "daily"
   - package-ecosystem: "cargo"
     directory: "/zellij-utils/"
     schedule:
-      interval: "monthly"
-    allow:
-      # Allow only direct updates
-      - dependency-name: "log"
-      - dependency-name: "log4rs"
-      - dependency-name: "clap"
-      - dependency-name: "clap_complete"
+      interval: "daily"
+
 
 
